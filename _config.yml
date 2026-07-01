@@ -1,4 +1,4 @@
-name: Quacknomics blog
-description: Contrarian economics and academic detours
+name: Quackonomics
+description: Contrarian economics and forays into quackademia 
 markdown: kramdown
 permalink: /:title/
