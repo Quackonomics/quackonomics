@@ -44,8 +44,8 @@ a:hover {
 }
 
 .bayer-header {
-    height: 160px;
-    border-bottom: 3px solid var(--color-text);
+    height: 100px;
+    border-bottom: 4px solid var(--color-text);
     background-color: var(--color-teal);
     
     /* 8px checkerboard dither matrix texture blending Orange to Teal */
@@ -54,7 +54,7 @@ a:hover {
         linear-gradient(90deg, var(--color-orange) 0%, var(--color-teal) 100%);
     
     background-position: 0 0, 0 0;
-    background-size: 8px 8px, 100% 100%;
+    background-size: 4px 4px, 100% 100%;
     background-repeat: repeat, no-repeat;
     
     display: flex;
