@@ -67,7 +67,7 @@ a:hover {
 /* Thick retro text shadow on the white title link */
 .header-content h1 a {
     color: #FFFFFF !important;
-    text-shadow: 3px 3px 0px var(--color-text);
+    text-shadow: 4px 0px 0px var(--color-text);
     border: none;
 }
 
@@ -78,7 +78,7 @@ a:hover {
     font-family: var(--font-mono);
     font-size: 0.9rem;
     text-transform: uppercase;
-    text-shadow: 2px 2px 0px var(--color-text);
+    text-shadow: 4px 0px 0px var(--color-text);
     letter-spacing: 1px;
 }
 
