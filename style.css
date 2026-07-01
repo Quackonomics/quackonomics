@@ -64,6 +64,24 @@ a:hover {
     letter-spacing: -1px;
 }
 
+/* Thick retro text shadow on the white title link */
+.header-content h1 a {
+    color: #FFFFFF !important;
+    text-shadow: 3px 3px 0px var(--color-text);
+    border: none;
+}
+
+/* Thick retro text shadow on the subtitle */
+.header-content p {
+    margin: 6px 0 0 0;
+    color: #FFFFFF !important;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 0px var(--color-text);
+    letter-spacing: 1px;
+}
+
 .header-content p {
     margin: 4px 0 0 0;
     color: #FFFFFF;
