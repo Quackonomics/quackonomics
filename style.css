@@ -43,64 +43,64 @@ a:hover {
     border-bottom-color: var(--color-teal);
 }
 
-/* Bayer Dithered Header (Vibrant Orange & Teal) */
-/* Bayer Dithered Header (Vibrant Orange & Teal) */
-.bayer-header {
-    height: 160px;
-    border-bottom: 3px solid var(--color-text);
-    background-color: var(--color-teal);
-    
-    /* 1. The two gradient layers */
-    background-image: 
-        /* Top Layer: Semi-transparent checkerboard dots (creates the dither texture) */
-        repeating-conic-gradient(rgba(27, 77, 84, 0.45) 0% 25%, transparent 0% 50%),
-        /* Bottom Layer: Smooth transition from Orange to Teal */
-        linear-gradient(90deg, var(--color-orange) 0%, var(--color-teal) 100%);
-    
-    /* 2. Position and size defined separately so the browser compiles them correctly */
-    background-position: 0 0, 0 0;
-    background-size: 3px 3px, 100% 100%;
-    background-repeat: repeat, no-repeat;
-    
-    display: flex;
-    align-items: flex-end;
-    padding: 24px;
-    box-sizing: border-box;
-}
-
+/* 1. Make the outer wrapper transparent and stack the lines vertically */
 .header-content {
-    background-color: #000000;
-    border: 2px solid #FFFFFF;
-    box-shadow: 4px 4px 0px var(--color-text);
-    padding: 16px 24px;
-    display: inline-block;
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns both boxes cleanly to the left */
+    gap: 8px;                /* Slight gap between the two highlights */
     max-width: 90%;
 }
 
+/* 2. Style the Main Title with a tight inline highlight */
 .header-content h1 {
+    margin: 0 !important;
     font-family: var(--font-title);
     font-weight: 900;
-    margin: 0;
     font-size: 2.2rem;
     letter-spacing: -1.5px;
+    line-height: 1.1;
 }
 
 .header-content h1 a {
-    color: #FFFFFF !important; /* Crisp white on black */
-    border: none;
+    background-color: #5B141B !important; /* Deep Bordeaux Red */
+    color: #FAF4E8 !important;            /* Lighter shade of the page background */
+    
+    /* Alternative: If you want a lighter shade of the Bordeaux itself, uncomment this: */
+    /* color: #E09AA2 !important; */
+
+    padding: 4px 12px;                    /* Tightly wraps the text */
+    display: inline;
+    border: none !important;
+    
+    /* Keeps padding clean if the title ever wraps to a second line */
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone; 
 }
 
+/* 3. Style the Subtitle with a matching inline highlight */
 .header-content p {
-    margin: 6px 0 0 0 !important;
-    color: var(--color-orange) !important; /* Bright orange subtitle */
-    font-family: var(--font-title); /* Uses Inter */
+    background-color: #5B141B !important; /* Matching Bordeaux Red */
+    color: #FAF4E8 !important;            /* Lighter shade of the page background */
+    
+    /* Alternative: If you want a lighter shade of the Bordeaux itself, uncomment this: */
+    /* color: #E09AA2 !important; */
+
+    font-family: var(--font-title);
     font-size: 0.85rem;
-    text-shadow: none !important;
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 1px;
+    
+    padding: 4px 10px;
+    display: inline-block;                /* Tightly wraps the subtitle */
+    margin: 0 !important;
+    text-shadow: none !important;
 }
-
 /* Layout Container */
 .container {
     max-width: 900px;
