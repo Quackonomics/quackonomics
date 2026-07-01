@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} — {{ site.name }}</title>
+    <!-- Google Fonts Imports -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <header class="bayer-header">
+        <div class="header-content">
+            <h1><a href="/" style="color: #FFFFFF; border: none;">{{ site.name }}</a></h1>
+            <p>{{ site.description }}</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <main>
+            {{ content }}
+        </main>
+
+        <aside>
+            <h3>ABOUT THE AUTHOR</h3>
+            <p>Drafts on economic history, reviews of classic texts, and thoughts on system legibility.</p>
+            
+            <h3 style="margin-top: 30px;">NAVIGATION</h3>
+            <ul>
+                <li><a href="/">Index</a></li>
+                <li><a href="https://github.com/{{ site.github_username }}">GitHub</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <footer>
+        <p>&copy; {{ 'now' | date: "%Y" }} — Statically Compiled.</p>
+    </footer>
+
+</body>
+</html>
