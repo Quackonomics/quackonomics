@@ -112,14 +112,13 @@ a:hover {
 
 
 
-/* Layout Container */
 .container {
-    max-width: 900px;
+    max-width: 1100px;              /* Widened from 900px to give content more space */
     margin: 40px auto;
-    padding: 0 20px;
+    padding: 0 24px;
     display: grid;
-    grid-template-columns: 2.5fr 1fr;
-    gap: 40px;
+    grid-template-columns: 3fr 1fr; /* Expanded the article width relative to the sidebar */
+    gap: 50px;                      /* Increased spacing between columns */
 }
 
 /* Content Blocks (Academic/Paper Style) */
@@ -155,30 +154,52 @@ blockquote {
     font-style: italic;
 }
 
-/* Sidebar */
+/* ==========================================================
+   SIDEBAR STYLING (Forced to Inter & Atkinson)
+   ========================================================== */
 aside {
     background-color: var(--color-card-bg);
     border: 1px solid var(--color-text);
     box-shadow: 5px 5px 0px var(--color-text);
-    padding: 25px;
+    padding: 24px;
     align-self: start;
 }
 
+/* Force "ABOUT THE AUTHOR" and "NAVIGATION" to use Inter cleanly */
 aside h3 {
     margin-top: 0;
-    font-size: 1.1rem;
-    font-family: var(--font-mono);
+    margin-bottom: 14px;
+    font-family: var(--font-title) !important; /* Explicitly forces Inter */
+    font-weight: 700 !important;
+    font-size: 0.95rem !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
     border-bottom: 1px solid var(--color-text);
-    padding-bottom: 5px;
+    padding-bottom: 6px;
+    color: var(--color-text);
 }
 
+/* Ensure the sidebar description text uses readable Atkinson Hyperlegible */
+aside p {
+    font-family: var(--font-main) !important;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+/* Ensure list items use Inter and look polished */
 aside ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 aside li {
-    margin-bottom: 12px;
+    font-family: var(--font-title);
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-bottom: 10px;
 }
 
 footer {
