@@ -44,11 +44,10 @@ a:hover {
 }
 
 .bayer-header {
-    height: 100px;
-    border-bottom: 4px solid var(--color-text);
+    height: 100px; /* Your new height */
+    border-bottom: 3px solid var(--color-text);
     background-color: var(--color-teal);
     
-    /* 8px checkerboard dither matrix texture blending Orange to Teal */
     background-image: 
         repeating-conic-gradient(rgba(27, 77, 84, 0.45) 0% 25%, transparent 0% 50%),
         linear-gradient(90deg, var(--color-orange) 0%, var(--color-teal) 100%);
@@ -58,8 +57,8 @@ a:hover {
     background-repeat: repeat, no-repeat;
     
     display: flex;
-    align-items: flex-end;
-    padding: 24px;
+    align-items: center;        /* Change from flex-end to center */
+    padding: 0 24px;            /* 0 padding on top/bottom, 24px on left/right to prevent compression */
     box-sizing: border-box;
 }
 
