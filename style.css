@@ -12,7 +12,16 @@
 
 /* Base Layout */
 body {
-    background-color: var(--color-bg);
+    /* Fallback color if gradient fails to load */
+    background-color: var(--color-bg); 
+    
+    /* Subtle gradient: from your original tan down to a slightly deeper, richer tan */
+    background-image: linear-gradient(180deg, #EADFC9 0%, #D2C5A7 100%);
+    
+    /* Ensures the gradient stretches the full height of the viewport without repeating */
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+
     color: var(--color-text);
     font-family: var(--font-main);
     margin: 0;
