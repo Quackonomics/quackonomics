@@ -113,12 +113,12 @@ a:hover {
 
 
 .container {
-    max-width: 1100px;              /* Widened from 900px to give content more space */
+    max-width: 1100px;              
     margin: 40px auto;
     padding: 0 24px;
     display: grid;
-    grid-template-columns: 3fr 1fr; /* Expanded the article width relative to the sidebar */
-    gap: 50px;                      /* Increased spacing between columns */
+    grid-template-columns: 3.5fr 1fr; /* Center part is now much wider, sidebar is narrower */
+    gap: 30px;                      /* Shrunk the gap from 50px to 30px */
 }
 
 /* Content Blocks (Academic/Paper Style) */
