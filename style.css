@@ -3,10 +3,11 @@
     --color-bg: #EADFC9;          
     --color-card-bg: #FFFDF9;     
     --color-text: #1F1A15;        
-    --color-orange: #FF6000;      /* Vibrant Orange */
-    --color-teal: #1B4D54;        /* Deep Oasis Teal */
+    --color-orange: #FF6000;      
+    --color-teal: #1B4D54;        
     --color-border: #D4C7AE;      
     --font-main: 'Atkinson Hyperlegible', sans-serif;
+    --font-title: 'Inter', sans-serif; /* New Title Font */
     --font-mono: ui-monospace, SFMono-Regular, monospace;
 }
 
@@ -67,36 +68,37 @@ a:hover {
     box-sizing: border-box;
 }
 
-.header-content h1 {
-    margin: 0;
-    font-size: 2.4rem;
-    letter-spacing: -1px;
+.header-content {
+    background-color: #000000;
+    border: 2px solid #FFFFFF;
+    box-shadow: 4px 4px 0px var(--color-text);
+    padding: 16px 24px;
+    display: inline-block;
+    max-width: 90%;
 }
 
-/* Thick retro text shadow on the white title link */
+.header-content h1 {
+    font-family: var(--font-title);
+    font-weight: 900;
+    margin: 0;
+    font-size: 2.2rem;
+    letter-spacing: -1.5px;
+}
+
 .header-content h1 a {
-    color: #FFFFFF !important;
-    text-shadow: 4px 0px 0px var(--color-text);
+    color: #FFFFFF !important; /* Crisp white on black */
     border: none;
 }
 
-/* Thick retro text shadow on the subtitle */
 .header-content p {
-    margin: 6px 0 0 0;
-    color: #FFFFFF !important;
-    font-family: var(--font-mono);
-    font-size: 0.9rem;
+    margin: 6px 0 0 0 !important;
+    color: var(--color-orange) !important; /* Bright orange subtitle */
+    font-family: var(--font-title); /* Uses Inter */
+    font-size: 0.85rem;
+    text-shadow: none !important;
     text-transform: uppercase;
-    text-shadow: 4px 0px 0px var(--color-text);
+    font-weight: 700;
     letter-spacing: 1px;
-}
-
-.header-content p {
-    margin: 4px 0 0 0;
-    color: #FFFFFF;
-    font-family: var(--font-mono);
-    font-size: 0.9rem;
-    text-transform: uppercase;
 }
 
 /* Layout Container */
