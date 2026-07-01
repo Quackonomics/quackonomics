@@ -1,0 +1,4 @@
+name: Quacknomics blog
+description: Contrarian economics and academic detours
+markdown: kramdown
+permalink: /:title/
