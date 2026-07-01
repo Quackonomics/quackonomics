@@ -34,15 +34,24 @@ a:hover {
 }
 
 /* Bayer Dithered Header (Vibrant Orange & Teal) */
+/* Bayer Dithered Header (Vibrant Orange & Teal) */
 .bayer-header {
     height: 160px;
     border-bottom: 3px solid var(--color-text);
     background-color: var(--color-teal);
-    /* 8px dither matrix texture blending Orange to Teal */
+    
+    /* 1. The two gradient layers */
     background-image: 
-        repeating-conic-gradient(rgba(27, 77, 84, 0.45) 0% 25%, transparent 0% 50%) 0px 0px / 8px 8px,
+        /* Top Layer: Semi-transparent checkerboard dots (creates the dither texture) */
+        repeating-conic-gradient(rgba(27, 77, 84, 0.45) 0% 25%, transparent 0% 50%),
+        /* Bottom Layer: Smooth transition from Orange to Teal */
         linear-gradient(90deg, var(--color-orange) 0%, var(--color-teal) 100%);
-    background-blend-mode: multiply;
+    
+    /* 2. Position and size defined separately so the browser compiles them correctly */
+    background-position: 0 0, 0 0;
+    background-size: 8px 8px, 100% 100%;
+    background-repeat: repeat, no-repeat;
+    
     display: flex;
     align-items: flex-end;
     padding: 24px;
