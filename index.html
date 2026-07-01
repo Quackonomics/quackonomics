@@ -1,0 +1,15 @@
+---
+layout: default
+title: Home
+---
+
+<div style="display: flex; flex-direction: column; gap: 40px;">
+  {% for post in site.posts %}
+    <article>
+      <div class="meta">{{ post.date | date: "%B %d, %Y" }} — {{ post.category }}</div>
+      <h2><a href="{{ post.url }}" style="color: var(--color-text); border: none;">{{ post.title }}</a></h2>
+      <p>{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
+      <p><a href="{{ post.url }}">Read this crap &rarr;</a></p>
+    </article>
+  {% endfor %}
+</div>
