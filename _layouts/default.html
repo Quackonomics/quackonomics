@@ -25,11 +25,21 @@
             {{ content }}
         </main>
 
-        <aside>
-            <h3>ABOUT THE AUTHOR</h3>
-            <p>Drafts on economic history, reviews of classic texts, and thoughts on system legibility.</p>
+<aside>
+            <h3>It's not my fault</h3>
+            <p>So I can't apologize</p>
             
-            <h3 style="margin-top: 30px;">NAVIGATION</h3>
+            <h3>RECENT HUMAN-SLOP</h3>
+            <ul style="margin-bottom: 25px;">
+                <!-- Jekyll dynamically pulls the 5 most recent posts here -->
+                {% for post in site.posts limit:5 %}
+                <li style="line-height: 1.3; margin-bottom: 12px;">
+                    <a href="{{ post.url | relative_url }}" style="font-size: 0.9rem;">{{ post.title }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+
+            <h3>LINKS</h3>
             <ul>
                 <li><a href="/">Index</a></li>
                 <li><a href="https://github.com/{{ site.github_username }}">GitHub</a></li>
