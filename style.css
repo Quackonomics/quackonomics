@@ -43,7 +43,27 @@ a:hover {
     border-bottom-color: var(--color-teal);
 }
 
-/* 1. Make the outer wrapper transparent and stack the lines vertically */
+.bayer-header {
+    height: 160px;
+    border-bottom: 3px solid var(--color-text);
+    background-color: var(--color-teal);
+    
+    /* 8px checkerboard dither matrix texture blending Orange to Teal */
+    background-image: 
+        repeating-conic-gradient(rgba(27, 77, 84, 0.45) 0% 25%, transparent 0% 50%),
+        linear-gradient(90deg, var(--color-orange) 0%, var(--color-teal) 100%);
+    
+    background-position: 0 0, 0 0;
+    background-size: 8px 8px, 100% 100%;
+    background-repeat: repeat, no-repeat;
+    
+    display: flex;
+    align-items: flex-end;
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+/* 2. The Text Wrapper (Ensures highlights align to the left and stack) */
 .header-content {
     background: none !important;
     border: none !important;
@@ -51,12 +71,12 @@ a:hover {
     padding: 0 !important;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Aligns both boxes cleanly to the left */
-    gap: 8px;                /* Slight gap between the two highlights */
+    align-items: flex-start;
+    gap: 8px;
     max-width: 90%;
 }
 
-/* 2. Style the Main Title with a tight inline highlight */
+/* 3. The Title (Inline Bordeaux Highlight) */
 .header-content h1 {
     margin: 0 !important;
     font-family: var(--font-title);
@@ -69,38 +89,30 @@ a:hover {
 .header-content h1 a {
     background-color: #5B141B !important; /* Deep Bordeaux Red */
     color: #FAF4E8 !important;            /* Lighter shade of the page background */
-    
-    /* Alternative: If you want a lighter shade of the Bordeaux itself, uncomment this: */
-    /* color: #E09AA2 !important; */
-
-    padding: 4px 12px;                    /* Tightly wraps the text */
+    padding: 4px 12px;
     display: inline;
     border: none !important;
-    
-    /* Keeps padding clean if the title ever wraps to a second line */
     box-decoration-break: clone;
     -webkit-box-decoration-break: clone; 
 }
 
-/* 3. Style the Subtitle with a matching inline highlight */
+/* 4. The Subtitle (Inline Bordeaux Highlight) */
 .header-content p {
     background-color: #5B141B !important; /* Matching Bordeaux Red */
     color: #FAF4E8 !important;            /* Lighter shade of the page background */
-    
-    /* Alternative: If you want a lighter shade of the Bordeaux itself, uncomment this: */
-    /* color: #E09AA2 !important; */
-
     font-family: var(--font-title);
     font-size: 0.85rem;
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 1px;
-    
     padding: 4px 10px;
-    display: inline-block;                /* Tightly wraps the subtitle */
+    display: inline-block;
     margin: 0 !important;
     text-shadow: none !important;
 }
+
+
+
 /* Layout Container */
 .container {
     max-width: 900px;
