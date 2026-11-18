@@ -136,6 +136,29 @@ article p {
     margin-bottom: 1.25em;
 }
 
+/* Semi-paragraphs: sub-line gap + subtle indent */
+.post-content p {
+    margin-top: 0;
+    margin-bottom: 0.35em; /* tweak between 0.35em and 0.55em to taste */
+    text-indent: 1.2em;
+}
+
+.post-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Flush-left on the opening line and right after each major block break */
+.post-content p:first-child,
+.post-content hr + p {
+    text-indent: 0;
+}
+
+/* Big break between the 3 true blocks */
+.post-content hr {
+    border: none;
+    margin: 2em 0;
+}
+
 article h2 {
     margin-top: 0;
     font-size: 1.8rem;
