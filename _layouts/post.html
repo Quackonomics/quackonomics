@@ -1,1 +1,15 @@
+---
+layout: default
+---
+<article>
+    <div class="meta">
+        {{ page.date | date: "%B %d, %Y" }}{% if page.category %} &mdash; {{ page.category }}{% endif %}
+    </div>
+    <h2>{{ page.title }}</h2>
 
+    {{ content }}
+
+    <p style="margin-top: 30px; border-top: 1px solid var(--color-border); padding-top: 15px;">
+        <a href="{{ '/' | relative_url }}">&larr; Back to all articles</a>
+    </p>
+</article>
