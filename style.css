@@ -108,17 +108,18 @@ a:hover {
     display: inline-block;
     margin: 0 !important;
     text-shadow: none !important;
+    line-height: 1.4;
 }
 
 
 
 .container {
-    max-width: 1100px;              
+    max-width: 1020px;              
     margin: 40px auto;
     padding: 0 24px;
     display: grid;
-    grid-template-columns: 3.5fr 1fr; /* Center part is now much wider, sidebar is narrower */
-    gap: 30px;                      /* Shrunk the gap from 50px to 30px */
+    grid-template-columns: 2.8fr 1fr;
+    gap: 30px;
 }
 
 /* Content Blocks (Academic/Paper Style) */
@@ -126,8 +127,13 @@ article {
     background-color: var(--color-card-bg);
     border: 1px solid var(--color-text);
     box-shadow: 5px 5px 0px var(--color-text);
-    padding: 35px;
+    padding: 40px 45px;
     margin-bottom: 40px;
+}
+
+article p {
+    margin-top: 0;
+    margin-bottom: 1.25em;
 }
 
 article h2 {
@@ -213,7 +219,43 @@ footer {
 
 /* Responsive */
 @media (max-width: 768px) {
+    body {
+        font-size: 1rem;
+    }
+
+    .bayer-header {
+        min-height: auto;
+        padding: 16px 16px;
+    }
+
+    .header-content {
+        max-width: 100%;
+        gap: 6px;
+    }
+
+    .header-content h1 {
+        font-size: 1.65rem;
+        letter-spacing: -1px;
+    }
+
+    .header-content p {
+        font-size: 0.72rem;
+    }
+
     .container {
         grid-template-columns: 1fr;
+        margin: 20px auto;
+        padding: 0 12px;
+        gap: 24px;
+    }
+
+    article {
+        padding: 22px 18px;
+        margin-bottom: 20px;
+    }
+
+    article h2 {
+        font-size: 1.45rem;
+        line-height: 1.25;
     }
 }
