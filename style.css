@@ -44,7 +44,7 @@ a:hover {
 }
 
 .bayer-header {
-    height: 100px; /* Your new height */
+    min-height: 100px;
     border-bottom: 3px solid var(--color-text);
     background-color: var(--color-teal);
     
@@ -57,8 +57,8 @@ a:hover {
     background-repeat: repeat, no-repeat;
     
     display: flex;
-    align-items: center;        /* Change from flex-end to center */
-    padding: 0 24px;            /* 0 padding on top/bottom, 24px on left/right to prevent compression */
+    align-items: center;
+    padding: 16px 24px;
     box-sizing: border-box;
 }
 
